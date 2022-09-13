@@ -9,6 +9,7 @@
     background-color: #fff;
     color: var(--clr-grey-dark-4);
     box-shadow: 0 1px 0 2px var(--clr-grey-light-2);
+    z-index: 9999;
 
     &--container {
         width: 95vw;
@@ -96,7 +97,6 @@
     }
 
     &__social {
-        // flex: 1 0 auto;
         @include flexCenter;
 
         a {

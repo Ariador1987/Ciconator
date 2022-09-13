@@ -28,13 +28,13 @@
     --clr-gradient-1: var(--clr-secondary-light);
     --clr-gradient-2: var(--clr-secondary-light);
 
-    --website-width: 120rem;
 
     --ff-header: "Raleway", sans-serif;
     --ff-vibes: 'Great Vibes', cursive;
     --ff-body: "Merriweather Sans", sans-serif;
 }
 
+$website-width: 1320px;
 $min-nav-height: 7.5rem;
 $counter-font-family: "Roboto Mono", sans-serif;
 $gradient-primary: linear-gradient(to right bottom,

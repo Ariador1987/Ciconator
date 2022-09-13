@@ -1,6 +1,7 @@
 .container {
-    max-width: 1320px;
+    max-width: $website-width;
     margin: 0 auto;
+    overflow: hidden;
 
     &--95vw {
         width: 95vw;

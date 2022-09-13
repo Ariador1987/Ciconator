@@ -4,23 +4,53 @@
     color: #fff;
     padding-top: $min-nav-height;
 
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+
     @include flexCenter;
     flex-direction: column;
 
     &__content {
         margin-top: 6.5rem;
-        letter-spacing: 8px;
+        letter-spacing: 2px;
         min-height: 40rem;
         font-size: 6rem;
         font-family: var(--ff-vibes);
+        font-weight: 400;
         text-align: center;
         text-transform: capitalize;
         position: relative;
         top: 5rem;
 
+        will-change: transform;
+        backface-visibility: hidden;
+
         @include flexCenter;
         flex-direction: column;
         justify-content: space-around;
+
+        span {
+            animation-duration: 1.2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: backwards;
+
+            @for $i from 1 to 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: (calc(0.70 * #{$i}s));
+                }
+            }
+
+            &:nth-child(odd) {
+                animation-name: moveInRight;
+            }
+
+            &:nth-child(even) {
+                animation-name: moveInLeft;
+
+                &::first-letter {
+                    color: var(--clr-primary-light);
+                }
+            }
+        }
     }
 
     &__cta {
