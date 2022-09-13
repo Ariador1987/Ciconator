@@ -1,0 +1,46 @@
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/heroImageUpscaled.jpg") no-repeat center top/cover;
+    min-height: 100vh;
+    color: #fff;
+    padding-top: $min-nav-height;
+
+    @include flexCenter;
+    flex-direction: column;
+
+    &__content {
+        margin-top: 6.5rem;
+        letter-spacing: 8px;
+        min-height: 40rem;
+        font-size: 6rem;
+        font-family: var(--ff-vibes);
+        text-align: center;
+        text-transform: capitalize;
+        position: relative;
+        top: 5rem;
+
+        @include flexCenter;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__cta {
+        display: inline-block;
+        text-align: center;
+        letter-spacing: 1.1px;
+        font-size: 2rem;
+        margin-top: 8rem;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        border-bottom: 2px solid var(--clr-primary-dark);
+        transition: 0.3s ease;
+        will-change: transform;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}
