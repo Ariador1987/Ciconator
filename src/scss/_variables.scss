@@ -9,7 +9,7 @@
 
     --clr-secondary: hsl(209, 63%, 75%);
     --clr-secondary-light: hsl(209, 84%, 56%);
-    --clr-secondary-dark: #5643fa;
+    --clr-secondary-dark: hsl(246, 95%, 62%);
 
     --clr-accent: hsl(272, 76%, 53%);
     --clr-accent-light: hsl(272, 83%, 64%);
@@ -34,7 +34,7 @@
     --ff-body: "Merriweather Sans", sans-serif;
 }
 
-$website-width: 1320px;
+$website-width: 1440px;
 $min-nav-height: 7.5rem;
 $counter-font-family: "Roboto Mono", sans-serif;
 $gradient-primary: linear-gradient(to right bottom,

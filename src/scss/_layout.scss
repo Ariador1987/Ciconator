@@ -1,0 +1,129 @@
+main {
+    background-color: var(--clr-grey-light-1);
+    color: var(--clr-grey-dark-4);
+    margin-top: -20rem;
+}
+
+.section {
+    &-about {
+        margin-top: 8rem;
+        padding: 30rem 5vw 15rem;
+
+        @include respond(tab-port) {
+            padding: 20rem 5vw;
+        }
+
+        &__info {
+            @include flexCenter;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include respond(tab-land) {
+                min-height: 40vw;
+            }
+
+            &--text {
+                margin-bottom: 4.5rem;
+                margin-right: 5rem;
+            }
+
+            &--btn {
+                align-self: flex-end;
+
+                @include respond(tab-port) {
+                    align-self: center;
+                }
+
+                @include respond(phone) {
+                    align-self: baseline;
+                }
+            }
+        }
+
+        &__images {
+            position: relative;
+
+            @include respond (tab-port) {
+                margin-top: 20rem;
+            }
+
+            .image {
+                @include posAbsCenter;
+                width: 55%;
+                max-width: 100%;
+                display: block;
+                object-fit: cover;
+                border-radius: 12px;
+                outline: 4px solid transparent;
+                transition: 0.2s;
+                box-shadow: 0 1.5rem 4rem hsla(0, 0%, 0%, 0.4);
+                will-change: outline;
+                backface-visibility: hidden;
+
+                @include respond(tab-port) {
+                    width: 40%;
+                }
+
+                @include respond(phone) {
+                    outline: 2px solid transparent;
+                }
+
+                &-1 {
+                    left: 25%;
+                    top: 0rem;
+
+                    @include respond(phone) {
+                        left: 20%;
+                        top: 5rem;
+                    }
+                }
+
+                &-2 {
+                    right: 0;
+                    top: 12.5rem;
+
+                    @include respond(tab-port) {
+                        top: 6.5rem;
+                    }
+
+                    @include respond(phone) {
+                        right: 75%;
+                        top: 0;
+                    }
+                }
+
+                &-3 {
+                    left: 80%;
+                    top: 25rem;
+
+                    @include respond(tab-land) {
+                        left: 70%;
+                    }
+
+                    @include respond(tab-port) {
+                        left: 75%;
+                        top: 10rem;
+                    }
+
+                    @include respond(phone) {
+                        top: -6rem;
+                    }
+                }
+
+                &:hover,
+                &:active {
+                    outline-offset: 3px;
+                    outline: 4px solid var(--clr-primary-light);
+                    z-index: 1;
+                    box-shadow: .75rem 2.25rem 5rem 3px hsla(0, 0%, 0%, 0.4);
+                    transform: translate(-50%, -50%) scale(1.05);
+                    filter: saturate(1.2);
+
+                    @include respond(phone) {
+                        outline: 2px solid var(--clr-primary-light);
+                    }
+                }
+            }
+        }
+    }
+}
