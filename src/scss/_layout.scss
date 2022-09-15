@@ -1,3 +1,18 @@
+.grid {
+    &--4x1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
 main {
     background-color: var(--clr-grey-light-1);
     color: var(--clr-grey-dark-4);
@@ -7,11 +22,7 @@ main {
 .section {
     &-about {
         margin-top: 8rem;
-        padding: 30rem 5vw 15rem;
 
-        @include respond(tab-port) {
-            padding: 20rem 5vw;
-        }
 
         &__info {
             @include flexCenter;
@@ -123,6 +134,46 @@ main {
                         outline: 2px solid var(--clr-primary-light);
                     }
                 }
+            }
+        }
+    }
+
+    &-technology {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/heroImageUpscaled.jpg") no-repeat center top/cover;
+        color: #fff;
+        min-height: 150vh;
+        position: relative;
+
+        @include respond(tab-port) {
+            margin-top: 8rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 0;
+        }
+
+        .testimonials {
+            text-align: center;
+            border: 1px solid red;
+            position: absolute;
+            bottom: 12.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-height: 20rem;
+            width: 50%;
+
+            @include respond(xxl-desktop) {
+                bottom: 3%;
+            }
+
+            @include respond(tab-port) {
+                bottom: 10%;
+                width: 75%;
+            }
+
+            @include respond(phone) {
+                bottom: -3%;
+                width: 90%;
             }
         }
     }

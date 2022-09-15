@@ -10,7 +10,7 @@
     flex-direction: column;
 
     &__content {
-        margin-top: 6.5rem;
+        margin-top: 4.5rem;
         letter-spacing: 2px;
         min-height: 40rem;
         font-size: 6rem;
@@ -20,6 +20,7 @@
         text-transform: capitalize;
         position: relative;
         top: 5rem;
+
 
         will-change: transform;
         backface-visibility: hidden;
@@ -58,12 +59,16 @@
         text-align: center;
         letter-spacing: 1.1px;
         font-size: 2rem;
-        margin-top: 8rem;
+        margin-top: 6.5rem;
         text-transform: uppercase;
         padding: 0.5rem;
         border-bottom: 2px solid var(--clr-primary-dark);
         transition: 0.3s ease;
         will-change: transform;
+
+        @include respond(xxl-desktop) {
+            margin-top: 5rem;
+        }
 
         &:hover {
             transform: translateY(-3px);
