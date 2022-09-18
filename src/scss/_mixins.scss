@@ -12,6 +12,12 @@
 }
 
 @mixin respond($device) {
+    @if $device ==xsphone {
+        @media only screen and (max-height: 46.5em) and (max-width: 37.5em) {
+            @content;
+        }
+    }
+
     @if $device ==phone {
         @media only screen and (max-width: 37.5em) {
             // design broke at 608px so i cheat a bit :-)

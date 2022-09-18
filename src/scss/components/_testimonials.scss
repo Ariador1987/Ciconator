@@ -2,7 +2,7 @@
     text-align: center;
     // border: 2px solid var(--clr-primary-dark);
     position: absolute;
-    bottom: 0;
+    bottom: -10%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-height: 20rem;
@@ -14,7 +14,6 @@
             rgba(0, 0, 0, 0.65));
     padding: 0 1.5rem 2.25rem;
     text-align: center;
-    overflow: visible;
 
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
 
@@ -28,7 +27,12 @@
     }
 
     @include respond(phone) {
-        bottom: -3%;
+        bottom: -12%;
+        width: 90%;
+    }
+
+    @include respond(xsphone) {
+        bottom: -40%;
         width: 90%;
     }
 
@@ -96,7 +100,7 @@
 
         border: 2px solid var(--clr-primary-dark);
         text-align: center;
-        padding: 1rem 2.75rem;
+        padding: .85rem 2.75rem;
         cursor: pointer;
         background-color: var(--clr-grey-dark-3);
         color: #fff;
@@ -104,6 +108,7 @@
     }
 
     &__title {
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 
@@ -116,6 +121,11 @@
     &__info {
         @include flexCenter;
         text-align: center;
-        margin: 1.5rem auto 2.25rem;
+        margin: 1.75rem auto 2.5rem;
+        min-height: 8rem;
+
+        @include respond(phone) {
+            min-height: 12rem;
+        }
     }
 }

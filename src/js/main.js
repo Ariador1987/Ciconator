@@ -1,4 +1,4 @@
-import { reviews } from "./reviews";
+import "./testimonials.js";
 
 const togglerBtn = document.querySelector(".main-nav--toggler");
 const linksContainer = document.querySelector(".main-nav__links-container");

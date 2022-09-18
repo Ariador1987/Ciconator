@@ -4,7 +4,7 @@ export const reviews = [
         name: "Cat One",
         job: "UX",
         img: "img/cat-1.jpg",
-        text: "This is some random text",
+        text: "Odličan posao na našoj kući u Vinišću, izuzetno smo zadovoljni kvalitetom i radom.",
     },
     {
         id: 2,
