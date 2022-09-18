@@ -19,8 +19,6 @@
         @include underline;
     }
 
-
-
     &--white {
         color: #fff;
     }
@@ -34,7 +32,15 @@
     padding: 30rem 5vw 15rem;
 
     @include respond(tab-port) {
-        padding: 20rem 5vw;
+        padding: 20rem 5vw 5rem;
+    }
+
+    &--small {
+        padding: 12.5rem 5vw 7.5rem;
+
+        @include respond(tab-port) {
+            padding: 10rem 5vw;
+        }
     }
 }
 

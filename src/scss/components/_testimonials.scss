@@ -1,46 +1,51 @@
 .testimonials {
     text-align: center;
     // border: 2px solid var(--clr-primary-dark);
-    position: absolute;
-    bottom: -10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // bottom: -10%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    background: #fff;
+    margin: 0 auto;
     min-height: 20rem;
     width: 50%;
     text-align: center;
     border-radius: 12px;
-    background: linear-gradient(to right,
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.65));
+
     padding: 0 1.5rem 2.25rem;
     text-align: center;
+    box-shadow: .4rem .4rem 1.2rem .4rem var(--clr-grey-light-4);
 
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
 
-    @include respond(xxl-desktop) {
-        bottom: -15%;
+    @include respond(tab-land) {
+        width: 100%;
     }
 
-    @include respond(tab-port) {
-        bottom: 10%;
-        width: 75%;
-    }
+    // clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
 
-    @include respond(phone) {
-        bottom: -12%;
-        width: 90%;
-    }
+    // @include respond(xxl-desktop) {
+    //     bottom: -15%;
+    // }
 
-    @include respond(xsphone) {
-        bottom: -40%;
-        width: 90%;
-    }
+    // @include respond(tab-port) {
+    //     bottom: 10%;
+    //     width: 75%;
+    // }
+
+    // @include respond(phone) {
+    //     bottom: -12%;
+    //     width: 90%;
+    // }
+
+    // @include respond(xsphone) {
+    //     display: none;
+    // }
 
     &__img {
         &--container {
             position: relative;
-            width: 150px;
-            height: 150px;
+            width: 15rem;
+            height: 15rem;
             border-radius: 50%;
             margin: 0 auto;
             margin-bottom: 1.5rem;
@@ -94,6 +99,7 @@
             justify-content: space-around;
 
             @include respond(phone) {
+                width: 90%;
                 justify-content: space-between;
             }
         }
@@ -102,8 +108,8 @@
         text-align: center;
         padding: .85rem 2.75rem;
         cursor: pointer;
-        background-color: var(--clr-grey-dark-3);
-        color: #fff;
+        background-color: var(--clr-grey-light-1);
+        color: var(--clr-primary-dark);
         font-size: 150%;
     }
 
@@ -121,7 +127,7 @@
     &__info {
         @include flexCenter;
         text-align: center;
-        margin: 1.75rem auto 2.5rem;
+        margin: 0 auto 2.5rem;
         min-height: 8rem;
 
         @include respond(phone) {

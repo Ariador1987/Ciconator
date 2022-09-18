@@ -21,7 +21,11 @@ main {
 
 .section {
     &-about {
-        margin-top: 8rem;
+        margin: 8rem 0;
+
+        @include respond(tab-port) {
+            margin: 8rem 0 30rem;
+        }
 
 
         &__info {
@@ -139,9 +143,10 @@ main {
     }
 
     &-technology {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/heroImageUpscaled.jpg") no-repeat center top/cover;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/krovnaPergola2.jpg") no-repeat center 75%/cover;
+        background-attachment: fixed;
         color: #fff;
-        min-height: 150vh;
+        min-height: 100vh;
         position: relative;
 
         @include respond(tab-port) {
@@ -152,4 +157,46 @@ main {
             margin-top: 0;
         }
     }
+
+    &-3d {
+        &__heading {
+            font-size: 4.2rem;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 2.2rem;
+            letter-spacing: 1.4px;
+
+            &--decoration {
+                color: var(--clr-primary-dark);
+            }
+        }
+
+        &__info {
+            font-size: 1.6rem;
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 8rem;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        &__images {
+            margin-bottom: 6rem;
+
+            img {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                max-height: 44rem;
+                box-shadow: .4rem .4rem 1.2rem .4rem var(--clr-grey-light-4);
+            }
+        }
+    }
+
+    &-gallery {}
 }
