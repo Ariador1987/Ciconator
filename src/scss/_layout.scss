@@ -198,5 +198,16 @@ main {
         }
     }
 
-    &-gallery {}
+    &-gallery {
+        &__heading {
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+            text-align: center;
+            color: transparent;
+            background: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+            background-clip: text;
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+    }
 }

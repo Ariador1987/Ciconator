@@ -135,17 +135,27 @@
 }
 
 .p {
-    &y {
-        &-4 {
-            padding: 4rem 0;
+    @for $i from 1 to 5 {
+        &y {
+            &-#{$i} {
+                padding: #{$i}rem 0;
+            }
         }
     }
 }
 
 .m {
-    &b {
-        &-4 {
-            margin-bottom: 10rem;
+    @for $i from 1 to 10 {
+        &b {
+            &-#{$i} {
+                margin-bottom: #{$i}rem;
+            }
         }
     }
+
+    // &b {
+    //     &-4 {
+    //         margin-bottom: 10rem;
+    //     }
+    // }
 }
