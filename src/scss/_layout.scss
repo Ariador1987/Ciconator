@@ -204,10 +204,180 @@ main {
             letter-spacing: 2.4px;
             text-align: center;
             color: transparent;
-            background: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+            background: linear-gradient(to right, var(--clr-primary), var(--clr-primary-dark));
             background-clip: text;
             font-size: 4.5rem;
             font-weight: 700;
         }
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            justify-content: center;
+            gap: 4rem;
+
+            @include respond(tab-port) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+            }
+
+            // @include respond(xxl-desktop) {
+            //     grid-template-columns: repeat(3, 1fr);
+            // }
+
+            img {
+                max-width: 100%;
+                max-height: 62.5rem;
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: 0.4s ease;
+                will-change: transform;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.03);
+                    filter: saturate(1.2);
+                }
+
+                @include respond(phone) {
+                    max-height: 75rem;
+                }
+            }
+        }
+
+        &__modal {
+            position: fixed;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            transition: 0.3s ease;
+            opacity: 0;
+            min-height: 100vh;
+            overflow: scroll;
+
+            &.open {
+                opacity: 1;
+                z-index: 999;
+            }
+
+
+            .close-btn {
+                position: absolute;
+                top: 10rem;
+                right: 5rem;
+                font-size: 5rem;
+                color: #fff;
+                background: transparent;
+                border-color: transparent;
+                cursor: pointer;
+
+                @include respond(tab-port) {
+                    right: 2rem;
+                    top: 15rem;
+                }
+
+                @include respond(phone) {
+                    right: 1.15rem;
+                    font-size: 4rem;
+                }
+            }
+
+            &--content {
+                width: 80%;
+                max-width: var(--max-width);
+                margin: 0 auto;
+                margin-top: 10rem;
+                position: relative;
+                padding-bottom: 5rem;
+
+                @include respond(tab-port) {
+                    margin-top: 15rem;
+                }
+
+                .main-img {
+                    width: 100%;
+                    height: 100%;
+                    min-height: 100%;
+                    min-width: 100%;
+                    max-height: 80rem;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    object-position: center;
+                }
+
+                .image-name {
+                    text-align: left;
+                    margin: 2rem 0 4.5rem;
+                    color: #fff;
+                    font-size: 2.1rem;
+                    min-width: 100%;
+                    padding: 0 1.5rem;
+                }
+
+                .modal-images {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .modal-img {
+                    width: 100%;
+                    height: 100%;
+                    min-height: 100%;
+                    min-width: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                    transition: 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.selected {
+                        opacity: 1;
+                    }
+                }
+
+                .next-btn,
+                .prev-btn {
+                    position: absolute;
+                    top: 25%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    font-size: 4rem;
+                    color: var(--clr-white);
+                    border-color: transparent;
+                    cursor: pointer;
+                    color: #fff;
+                }
+
+                .prev-btn {
+                    left: -6rem;
+
+                    @include respond(phone) {
+                        left: -4rem;
+                    }
+                }
+
+                .next-btn {
+                    right: -6rem;
+
+                    @include respond(phone) {
+                        right: -4rem;
+                    }
+                }
+            }
+        }
+
     }
 }
