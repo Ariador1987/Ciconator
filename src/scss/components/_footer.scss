@@ -10,6 +10,12 @@
 
     &__notification {
         font-size: 3.4rem;
+
+        &--exclam {
+            font-weight: 700;
+            font-size: 3.8rem;
+            color: var(--clr-primary);
+        }
     }
 
     &__contact {

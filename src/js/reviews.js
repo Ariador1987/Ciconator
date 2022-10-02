@@ -15,14 +15,14 @@ export const reviews = [
     },
     {
         id: 3,
-        name: "Tanja V",
+        name: "Tanja V.",
         city: "Omiš",
         img: "img/tanja-omis.jpg",
         text: "Prezadovoljni smo pergolom. Hvala!",
     },
     {
         id: 4,
-        name: "Andro Č",
+        name: "Andro Č.",
         city: "Marina",
         img: "img/andro-marina.jpg",
         text: "Fenomalno odrađeno stubište, firma koju ću rado opet unajmiti.",
