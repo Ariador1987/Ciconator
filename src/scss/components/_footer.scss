@@ -1,0 +1,23 @@
+.footer {
+    min-height: 20rem;
+    background-color: var(--clr-grey-light-2);
+    color: var(--clr-grey-dark-3);
+    text-align: center;
+    @include flexCenter;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.2rem;
+
+    &__notification {
+        font-size: 3.4rem;
+    }
+
+    &__contact {
+        font-size: 2.4rem;
+        color: #333;
+
+        &--mail {
+            color: var(--clr-primary-dark) !important;
+        }
+    }
+}

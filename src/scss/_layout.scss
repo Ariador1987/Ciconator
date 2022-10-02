@@ -15,6 +15,7 @@
 
 .info-boxes {
     @include flexCenter;
+    align-items: baseline;
     flex-wrap: wrap;
 
     .accordion {
@@ -232,6 +233,9 @@ main {
             justify-items: center;
             justify-content: center;
             gap: 4rem;
+            position: relative;
+
+
 
             @include respond(tab-port) {
                 grid-template-columns: repeat(2, 1fr);
@@ -248,8 +252,12 @@ main {
             .ratio-box {
                 width: 100%;
                 height: 0;
-                padding-top: calc(100% * (4 / 3));
+                padding-top: 100%;
                 position: relative;
+
+                &--d-none {
+                    display: none;
+                }
             }
 
             img {
@@ -260,6 +268,7 @@ main {
                 height: 100%;
                 // max-height: 50rem;
                 // width: 100%;
+
                 object-fit: cover;
                 border-radius: 8px;
                 transition: 0.4s ease;
@@ -277,6 +286,19 @@ main {
                     max-height: 75rem;
                 }
             }
+        }
+
+        &--item-count {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 3.6rem;
+            font-family: var(--ff-mono);
+            color: var(--clr-primary-light);
+            display: inline-block;
+            text-shadow: 2px 2px 4px 2px red;
+            font-weight: 400;
+            @include stroke(1, var(--clr-primary-dark));
         }
 
         &__modal {
@@ -316,8 +338,11 @@ main {
                 @include respond(phone) {
                     right: 1.15rem;
                     font-size: 4rem;
+                    color: #333;
                 }
             }
+
+
 
             &--content {
                 width: 80%;
@@ -331,82 +356,62 @@ main {
                     margin-top: 15rem;
                 }
 
-                img {}
 
-                .main-img {
-                    width: 100%;
-                    height: 100%;
-                    min-height: 100%;
-                    min-width: 100%;
-                    max-height: 80rem;
-                    object-fit: cover;
-                    border-radius: 8px;
+
+                // .modal-images {
+                //     display: grid;
+                //     grid-template-columns: repeat(2, 1fr);
+                // }
+
+                // .modal-img {
+                //     width: 100%;
+                //     height: 100%;
+                //     min-height: 100%;
+                //     min-width: 100%;
+                //     max-height: 50rem;
+                //     object-fit: cover;
+                //     opacity: 0.5;
+                //     transition: 0.2s;
+                //     cursor: pointer;
+
+                //     &:hover {
+                //         opacity: 1;
+                //     }
+
+                //     &.selected {
+                //         opacity: 1;
+                //     }
+            }
+
+            .next-btn,
+            .prev-btn {
+                position: absolute;
+                top: 25%;
+                transform: translateY(-50%);
+                background: transparent;
+                font-size: 4rem;
+                color: var(--clr-white);
+                border-color: transparent;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            .prev-btn {
+                left: -6rem;
+
+                @include respond(phone) {
+                    left: -4rem;
                 }
+            }
 
-                .image-name {
-                    text-align: left;
-                    margin: 2rem 0 4.5rem;
-                    color: #fff;
-                    font-size: 2.1rem;
-                    min-width: 100%;
-                    padding: 0 1.5rem;
-                }
+            .next-btn {
+                right: -6rem;
 
-                .modal-images {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                .modal-img {
-                    width: 100%;
-                    height: 100%;
-                    min-height: 100%;
-                    min-width: 100%;
-                    max-height: 50rem;
-                    object-fit: cover;
-                    opacity: 0.5;
-                    transition: 0.2s;
-                    cursor: pointer;
-
-                    &:hover {
-                        opacity: 1;
-                    }
-
-                    &.selected {
-                        opacity: 1;
-                    }
-                }
-
-                .next-btn,
-                .prev-btn {
-                    position: absolute;
-                    top: 25%;
-                    transform: translateY(-50%);
-                    background: transparent;
-                    font-size: 4rem;
-                    color: var(--clr-white);
-                    border-color: transparent;
-                    cursor: pointer;
-                    color: #fff;
-                }
-
-                .prev-btn {
-                    left: -6rem;
-
-                    @include respond(phone) {
-                        left: -4rem;
-                    }
-                }
-
-                .next-btn {
-                    right: -6rem;
-
-                    @include respond(phone) {
-                        right: -4rem;
-                    }
+                @include respond(phone) {
+                    right: -4rem;
                 }
             }
         }
-
     }
+
 }
