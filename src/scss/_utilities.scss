@@ -126,6 +126,10 @@
     }
 }
 
+.scroll-margin-offset {
+    scroll-margin-top: 40px;
+}
+
 .g {
     @for $i from 1 to 5 {
         &-#{$i} {

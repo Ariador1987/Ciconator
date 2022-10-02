@@ -9,16 +9,34 @@ const hamburgerLines = document.querySelectorAll(".main-nav--toggler-line");
 const galleryItemsContainer = document.querySelectorAll(
     ".section-gallery__content"
 );
+const heroCtaBtn = document.querySelector(".hero__cta");
+const izradaBtn = document.querySelector(".section-about__info--btn");
 
 const lightbox = GLightbox({
     touchNavigation: true,
     selector: ".glightbox3",
 });
 
+heroCtaBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#onama").scrollIntoView({ behavior: "smooth" });
+});
+
+izradaBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#izrada").scrollIntoView({ behavior: "smooth" });
+});
+
 togglerBtn.addEventListener("click", (e) => {
     e.preventDefault();
     hamburgerLines.forEach((el) => el.classList.toggle("active"));
     linksContainer.classList.toggle("active");
+});
+
+linksContainer.addEventListener("click", (e) => {
+    const id = e.target.getAttribute("href");
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 });
 
 linksContainer.addEventListener("click", (e) => {
@@ -32,7 +50,6 @@ linksContainer.addEventListener("click", (e) => {
 galleryItemsContainer.forEach((container) => {
     const imagesCounts = [...container.querySelectorAll(".glightbox3")];
     const span = container.querySelector(".section-gallery--item-count");
-    console.log(span);
 
     const DEFAULT_IMG_COUNT = 2;
     if (span) {
@@ -42,7 +59,3 @@ galleryItemsContainer.forEach((container) => {
         }
     }
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     [...accordionContents].forEach((el) => el.classList.add("hidden"));
-// });
