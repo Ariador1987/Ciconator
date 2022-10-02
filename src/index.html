@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../dist/css/main.css">
+    <meta name="description"
+        content="JF Metal is metal processing company which does everything you might need, from fences, staircases, rooftops and custom furniture.">
+    <meta property="og:title" content="JF Metal - Sve za metalne konstrukcije">
+    <meta property="og:description"
+        content="JF Metal is metal processing company which does everything you might need, from fences, staircases, rooftops and custom furniture.">
+    <meta property="og:url" content="https://jf-metal.hr">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./js/main.js" type="module" defer></script>
-    <title>Vidit ćemo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" /> -->
+    <script type="module" defer src="./js/main.js"></script>
+    <title>JF Metal - Metalne konstrukcije za sve</title>
 </head>
 
 <body>
@@ -67,7 +76,7 @@
                             <a href="#" class="main-nav__links--link">izrada</a>
                         </li>
                         <li class="main-nav__links--item">
-                            <a href="#" class="main-nav__links--link">galerija</a>
+                            <a href="#" class="main-nav__links--link">proizvodi</a>
                         </li>
                         <li class="main-nav__links--item">
                             <a href="#" class="main-nav__links--link">kontakt</a>
@@ -122,10 +131,10 @@
                 <div class="text-center">
                     <h2 class="section-heading section-heading--white ul-dark">Metode izrade</h2>
                 </div>
-                <article class="grid--4x1 g-4 py-4">
+                <article class="info-boxes g-4 py-4">
                     <div class="accordion">
                         <div class="accordion-heading">
-                            <h4 class="accordion-heading--title">OGRADE</h4>
+                            <h4 class="accordion-heading--title">rad po mjeri</h4>
                             <span class="accordion-heading--icon">
                                 &plus;
                             </span>
@@ -137,7 +146,7 @@
                     </div>
                     <div class="accordion">
                         <div class="accordion-heading">
-                            <h4 class="accordion-heading--title">KAPIJE</h4>
+                            <h4 class="accordion-heading--title">finiširanje</h4>
                             <span class="accordion-heading--icon">
                                 &plus;
                             </span>
@@ -149,7 +158,7 @@
                     </div>
                     <div class="accordion">
                         <div class="accordion-heading">
-                            <h4 class="accordion-heading--title">PERGOLE</h4>
+                            <h4 class="accordion-heading--title">matiranje</h4>
                             <span class="accordion-heading--icon">
                                 &plus;
                             </span>
@@ -157,18 +166,6 @@
                         <blockquote class="accordion-content">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet eaque et debitis,
                             repellendus explicabo fugit sit ullam fugiat harum.
-                        </blockquote>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion-heading">
-                            <h4 class="accordion-heading--title">VRATA</h4>
-                            <span class="accordion-heading--icon">
-                                &plus;
-                            </span>
-                        </div>
-                        <blockquote class="accordion-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet eaque et debitis,
-                            repellendus explica.
                         </blockquote>
                     </div>
                 </article>
@@ -208,49 +205,94 @@
             </article>
         </section>
         <section class="section-gallery section-padded--small">
-            <h2 class="section-gallery__heading mb-6">Galerija</h2>
-            <h4 class="mb-4">Kapije</h4>
-            <div class="section-gallery__content kapije mb-6">
-                <img src="./img/gallery/cat-1.jpg" class="gallery-img" alt="cat" data-id="1" data-name="kapije">
-                <img src="./img/gallery/cat-2.jpg" class="gallery-img" alt="cat" data-id="2" data-name="kapije">
-                <img src="./img/gallery/cat-3.jpg" class="gallery-img" alt="cat" data-id="3" data-name="kapije">
-                <img src="./img/gallery/cat-4.jpg" class="gallery-img" alt="cat" data-id="4" data-name="kapije">
-            </div>
-            <h4 class="mb-4">Ograde</h4>
-            <div class="section-gallery__content ograde mb-6">
-                <img src="./img/gallery/cat-7.jpg" class="gallery-img" alt="cat" data-id="7" data-name="ograde">
-                <img src="./img/gallery/cat-8.jpg" class="gallery-img" alt="cat" data-id="8" data-name="ograde">
-                <img src="./img/gallery/cat-9.jpg" class="gallery-img" alt="cat" data-id="9" data-name="ograde">
-                <img src="./img/gallery/cat-10.jpg" class="gallery-img" alt="cat" data-id="10" data-name="ograde">
-            </div>
-            <div class="section-gallery__modal">
-                <!-- <button class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="section-gallery__modal--content">
-                    <button class="prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    <img src="./img/gallery/cat-1.jpg" alt="cat" data-id="1" class="main-img">
-                    <p class="image-name">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos maiores,
-                        neque distinctio et rerum architecto voluptas doloremque! Accusamus quidem qui temporibus cum
-                        placeat fugit nam!</p>
-                    <div class="modal-images g-1">
-                        <img src="./img/gallery/cat-1.jpg" alt="cat" class="modal-img selected">
-                        <img src="./img/gallery/cat-2.jpg" alt="cat" class="modal-img">
-                        <img src="./img/gallery/cat-3.jpg" alt="cat" class="modal-img">
-                        <img src="./img/gallery/cat-4.jpg" alt="cat" class="modal-img">
+            <h2 class="section-gallery__heading mb-6">Proizvodi</h2>
+            <div class="mb-8">
+                <h4 class="mb-4 section-gallery__title">Stubišta</h4>
+                <div class="section-gallery__content kapije mb-6">
+                    <div class="ratio-box">
+                        <a href="img/gallery/cat-1.jpg" data-gallery="gallery1" data-draggable="true">
+                            <img src="img/gallery/cat-1.jpg" alt="image" class="glightbox3" data-gallery="gallery1"
+                                data-draggable="true" />
+                        </a>
                     </div>
-                </div> -->
+                    <div class="ratio-box">
+                        <a href="img/gallery/cat-2.jpg" data-gallery="gallery1" data-draggable="true">
+                            <img src="img/gallery/cat-2.jpg" alt="image" class="glightbox3" data-gallery="gallery1"
+                                data-draggable="true" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h4 class="mb-4 section-gallery__title">Pergole</h4>
+                <div class="section-gallery__content ograde mb-6">
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-7.jpg" class="gallery-img" alt="cat" data-id="7" data-name="ograde">
+                    </div>
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-8.jpg" class="gallery-img" alt="cat" data-id="8" data-name="ograde">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h4 class="mb-4 section-gallery__title">Interijer</h4>
+                <div class="section-gallery__content ograde mb-6">
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-7.jpg" class="gallery-img" alt="cat" data-id="7" data-name="ograde">
+                    </div>
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-8.jpg" class="gallery-img" alt="cat" data-id="8" data-name="ograde">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h4 class="mb-4 section-gallery__title">Ograde</h4>
+                <div class="section-gallery__content ograde mb-6">
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-7.jpg" class="gallery-img" alt="cat" data-id="7" data-name="ograde">
+                    </div>
+                    <div class="ratio-box">
+                        <img src="img/gallery/cat-8.jpg" class="gallery-img" alt="cat" data-id="8" data-name="ograde">
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
     </main>
     <footer>
         FOOTER
     </footer>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            selector: ".glightbox3"
+        });
+    </script>
 </body>
 
 </html>
+<!-- <div class="section-gallery__modal"> -->
+<!-- <button class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="section-gallery__modal--content">
+                <button class="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <img src="./img/gallery/cat-1.jpg" alt="cat" data-id="1" class="main-img">
+                <p class="image-name">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos maiores,
+                    neque distinctio et rerum architecto voluptas doloremque! Accusamus quidem qui temporibus cum
+                    placeat fugit nam!</p>
+                <div class="modal-images g-1">
+                    <img src="./img/gallery/cat-1.jpg" alt="cat" class="modal-img selected">
+                    <img src="./img/gallery/cat-2.jpg" alt="cat" class="modal-img">
+                    <img src="./img/gallery/cat-3.jpg" alt="cat" class="modal-img">
+                    <img src="./img/gallery/cat-4.jpg" alt="cat" class="modal-img">
+                </div>
+            </div> -->

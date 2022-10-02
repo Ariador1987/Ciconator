@@ -20,6 +20,6 @@ linksContainer.addEventListener("click", (e) => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    [...accordionContents].forEach((el) => el.classList.add("hidden"));
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     [...accordionContents].forEach((el) => el.classList.add("hidden"));
+// });

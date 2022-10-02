@@ -160,6 +160,7 @@
             position: relative;
 
             @include respond(phone) {
+                font-size: 2.4rem;
                 margin-bottom: 2rem;
             }
         }

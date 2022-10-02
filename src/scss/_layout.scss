@@ -13,6 +13,15 @@
     }
 }
 
+.info-boxes {
+    @include flexCenter;
+    flex-wrap: wrap;
+
+    .accordion {
+        flex: 0 0 30rem;
+    }
+}
+
 main {
     background-color: var(--clr-grey-light-1);
     color: var(--clr-grey-dark-4);
@@ -146,7 +155,7 @@ main {
         background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/krovnaPergola2.jpg") no-repeat center 75%/cover;
         background-attachment: fixed;
         color: #fff;
-        min-height: 100vh;
+        min-height: 75vh;
         position: relative;
 
         @include respond(tab-port) {
@@ -210,6 +219,13 @@ main {
             font-weight: 700;
         }
 
+        &__title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--clr-primary-dark);
+            letter-spacing: 1.4px;
+        }
+
         &__content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -229,16 +245,27 @@ main {
             //     grid-template-columns: repeat(3, 1fr);
             // }
 
-            img {
-                max-width: 100%;
-                max-height: 62.5rem;
-                display: block;
-                height: 100%;
+            .ratio-box {
                 width: 100%;
+                height: 0;
+                padding-top: calc(100% * (4 / 3));
+                position: relative;
+            }
+
+            img {
+                // max-width: 100%;
+                // max-height: 62.5rem;
+                // display: block;
+                width: 100%;
+                height: 100%;
+                // max-height: 50rem;
+                // width: 100%;
                 object-fit: cover;
                 border-radius: 8px;
                 transition: 0.4s ease;
                 will-change: transform;
+                position: absolute;
+                top: 0;
 
                 &:hover {
                     cursor: pointer;
@@ -304,9 +331,7 @@ main {
                     margin-top: 15rem;
                 }
 
-                img {
-                    aspect-ratio: 1/1;
-                }
+                img {}
 
                 .main-img {
                     width: 100%;
