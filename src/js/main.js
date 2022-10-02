@@ -34,6 +34,7 @@ togglerBtn.addEventListener("click", (e) => {
 });
 
 linksContainer.addEventListener("click", (e) => {
+    e.preventDefault();
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 });
