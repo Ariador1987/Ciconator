@@ -19,6 +19,7 @@ let interval = setInterval(() => intervalSetup(), intervalTiming);
 
 // Event Listeners
 testimonialContainer.addEventListener("mouseover", () => {
+    console.log("hi");
     clearInterval(interval);
 });
 

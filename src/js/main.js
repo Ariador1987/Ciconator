@@ -1,6 +1,7 @@
-import "./accordion.js";
 import "./gallery.js";
 import "./glightbox.js";
+import "./accordion.js";
+import "./testimonials.js";
 
 const togglerBtn = document.querySelector(".main-nav--toggler");
 const linksContainer = document.querySelector(".main-nav__links-container");
