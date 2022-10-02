@@ -14,7 +14,7 @@ const btnTestimonialRight = document.querySelector(
 
 // State
 let currentNumber = 0;
-const intervalTiming = 2250;
+const intervalTiming = 2750;
 let interval = setInterval(() => intervalSetup(), intervalTiming);
 
 // Event Listeners
@@ -76,6 +76,6 @@ function isValidNumber(num) {
 function setProperties(item) {
     testimonialImg.src = item.img;
     testimonialTitle.textContent = item.name;
-    testimonialJob.textContent = item.job;
+    testimonialJob.textContent = item.city;
     testimonialInfo.textContent = item.text;
 }
