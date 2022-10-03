@@ -19,13 +19,13 @@ const loadImg = (entries, obs) => {
 const imgObserver = new IntersectionObserver(loadImg, {
     root: null,
     threshold: 0.1,
-    rootMargin: "200px",
+    rootMargin: "500px",
 });
 
 const lazierObserver = new IntersectionObserver(loadImg, {
     root: null,
     threshold: 0.1,
-    rootMargin: "200px",
+    rootMargin: "500px",
 });
 
 imgs.forEach((img) => imgObserver.observe(img));

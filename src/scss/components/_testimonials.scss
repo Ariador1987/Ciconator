@@ -43,16 +43,14 @@
             }
 
             &::after {
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
-                font-size: 125%;
-                content: "\f10e";
+                font-weight: 700;
+                font-size: 4rem;
+                content: open-quote;
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 4rem;
                 height: 4rem;
-                @include flexCenter;
                 border-radius: 50%;
                 transform: translateY(25%);
                 background: var(--clr-grey-dark-3);
@@ -85,13 +83,14 @@
             }
         }
 
+        @include flexCenter;
         border: 2px solid var(--clr-primary-dark);
         text-align: center;
         padding: .85rem 2.75rem;
         cursor: pointer;
         background-color: var(--clr-grey-light-1);
         color: var(--clr-primary-dark);
-        font-size: 150%;
+        font-size: 200%;
     }
 
     &__title {
