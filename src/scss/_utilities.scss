@@ -127,8 +127,14 @@
 }
 
 .scroll-margin-offset {
-    scroll-margin-top: 40px;
+    scroll-margin-top: 24px;
 }
+
+.lazy-img,
+.lazier-img {
+    filter: blur(5px);
+}
+
 
 .g {
     @for $i from 1 to 5 {

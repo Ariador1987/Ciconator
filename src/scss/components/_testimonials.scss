@@ -1,10 +1,5 @@
 .testimonials {
     text-align: center;
-    // border: 2px solid var(--clr-primary-dark);
-    // position: absolute;
-    // bottom: -10%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     background: #fff;
     margin: 0 auto;
     min-height: 20rem;
@@ -26,26 +21,6 @@
         width: 90%;
         max-width: 90%;
     }
-
-    // clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
-
-    // @include respond(xxl-desktop) {
-    //     bottom: -15%;
-    // }
-
-    // @include respond(tab-port) {
-    //     bottom: 10%;
-    //     width: 75%;
-    // }
-
-    // @include respond(phone) {
-    //     bottom: -12%;
-    //     width: 90%;
-    // }
-
-    // @include respond(xsphone) {
-    //     display: none;
-    // }
 
     &__img {
         &--container {
@@ -128,6 +103,11 @@
         font-size: 1.4rem;
         text-transform: uppercase;
         color: var(--clr-primary);
+        font-weight: 600;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
     }
 
     &__info {

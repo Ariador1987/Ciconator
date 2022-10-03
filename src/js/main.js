@@ -1,4 +1,4 @@
-import "./gallery.js";
+import "./lazyload.js";
 import "./glightbox.js";
 import "./accordion.js";
 import "./testimonials.js";
@@ -43,7 +43,7 @@ const makeZiziHappy = (entries, obs) => {
 };
 const sectionObserver = new IntersectionObserver(makeZiziHappy, {
     root: null,
-    threshold: 0.2,
+    threshold: 0.175,
 });
 allSections.forEach((sect) => {
     sectionObserver.observe(sect);
