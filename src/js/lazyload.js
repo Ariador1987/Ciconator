@@ -3,7 +3,6 @@ const lazierImgs = document.querySelectorAll(".lazier-img");
 
 const loadImg = (entries, obs) => {
     const [entry] = entries;
-    console.log(entry);
 
     if (!entry.isIntersecting) return;
 
