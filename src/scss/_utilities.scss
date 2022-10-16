@@ -28,6 +28,20 @@
     }
 }
 
+.black-heading {
+    text-transform: uppercase;
+    color: 333;
+    text-align: center;
+    font-size: 3.8rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1.2px;
+
+    &--xl {
+        @extend .black-heading;
+        font-size: 4.4rem;
+    }
+}
+
 .section-padded {
     padding: 30rem 5vw 15rem;
 

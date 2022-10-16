@@ -1,5 +1,6 @@
 .hero {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/heroImageUpscaled.jpg") no-repeat center top/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/naslovnica.jpg") no-repeat center center/cover;
+
     min-height: 100vh;
     color: #fff;
     padding-top: $min-nav-height;
@@ -33,6 +34,7 @@
             animation-duration: 1.2s;
             animation-timing-function: ease-in-out;
             animation-fill-mode: backwards;
+            text-transform: uppercase;
 
             @for $i from 1 to 3 {
                 &:nth-child(#{$i}) {
@@ -46,10 +48,6 @@
 
             &:nth-child(even) {
                 animation-name: moveInLeft;
-
-                &::first-letter {
-                    color: var(--clr-primary-light);
-                }
             }
         }
     }
