@@ -1,7 +1,7 @@
 import "./lazyload.js";
 import "./glightbox.js";
 import "./accordion.js";
-import "./testimonials.js";
+// import "./testimonials.js";
 
 const togglerBtn = document.querySelector(".main-nav--toggler");
 const linksContainer = document.querySelector(".main-nav__links-container");
@@ -43,7 +43,7 @@ const makeZiziHappy = (entries, obs) => {
 };
 const sectionObserver = new IntersectionObserver(makeZiziHappy, {
     root: null,
-    threshold: 0.175,
+    threshold: 0.15,
 });
 allSections.forEach((sect) => {
     sectionObserver.observe(sect);
