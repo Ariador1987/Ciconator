@@ -1,6 +1,7 @@
 import "./lazyload.js";
 import "./glightbox.js";
 import "./accordion.js";
+import "./counter.js";
 // import "./testimonials.js";
 
 const togglerBtn = document.querySelector(".main-nav--toggler");

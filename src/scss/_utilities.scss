@@ -179,6 +179,13 @@
                 margin-bottom: #{$i}rem;
             }
         }
+
+        &y {
+            &-#{$i} {
+                margin-top: #{i}rem;
+                margin-bottom: #{i}rem;
+            }
+        }
     }
 
     // &b {
