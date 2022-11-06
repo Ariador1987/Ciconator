@@ -26,7 +26,7 @@ const startCounting = () => {
 
             const c = +counter.textContent;
 
-            const increment = target / 150;
+            const increment = target / 100;
 
             if (c < target) {
                 counter.textContent = `${Math.ceil(c + increment)}`;

@@ -38,6 +38,11 @@
             letter-spacing: 2.2px;
             text-transform: uppercase;
             color: var(--clr-grey-dark-2);
+
+            &__decoration {
+                font-weight: 300;
+                text-transform: lowercase;
+            }
         }
 
         &--number {

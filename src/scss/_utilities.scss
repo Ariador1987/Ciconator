@@ -194,3 +194,18 @@
     //     }
     // }
 }
+
+.pos {
+    &--rel {
+        position: relative;
+    }
+
+    &--abs {
+        position: absolute;
+    }
+}
+
+.tr {
+    top: -6px;
+    right: -24px;
+}
